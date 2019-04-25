@@ -1,0 +1,33 @@
+{
+    "name": "hiqdev/recon-powerdns",
+    "type": "library",
+    "require-dev": {
+        "hiqdev/hidev-php": "<2.0 || dev-master",
+        "hiqdev/hidev-hiqdev": "<2.0 || dev-master",
+        "hiqdev/hidev": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "hiqdev\\recon\\powerdns\\": "src",
+            "hiqdev\\recon\\powerdns\\tests\\": "tests"
+        }
+    },
+    "extra": {
+        "config-plugin": {
+            "console": "config/console.php",
+            "common": "config/common.php",
+            "params": "config/params.php"
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.hiqdev.com"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

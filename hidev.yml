@@ -1,0 +1,6 @@
+package:
+    type:       library
+    name:       hiqdev/recon-powerdns
+    title:      Recon module for PowerDNS management
+    keywords:   php, recon, powerdns
+
