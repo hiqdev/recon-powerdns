@@ -1,6 +1,10 @@
 {
     "name": "hiqdev/recon-powerdns",
     "type": "library",
+    "require": {
+        "hiqdev/recon": "dev-master",
+        "hiqdev/recon-dns": "dev-master"
+    },
     "require-dev": {
         "hiqdev/hidev-php": "<2.0 || dev-master",
         "hiqdev/hidev-hiqdev": "<2.0 || dev-master",
