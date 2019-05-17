@@ -1,6 +1,6 @@
 <?php
 
-namespace hiqdev\recon\powerdns\Service;
+namespace hiqdev\recon\powerdns\Exception;
 
 use hiqdev\recon\core\Exception\ReconException;
 use Psr\Http\Message\ResponseInterface;

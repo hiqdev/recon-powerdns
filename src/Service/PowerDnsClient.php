@@ -5,6 +5,7 @@ namespace hiqdev\recon\powerdns\Service;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use hiqdev\recon\dns\Model\Zone;
+use hiqdev\recon\powerdns\Exception\PowerDnsResponseException;
 
 /**
  * Class PowerDnsClient
