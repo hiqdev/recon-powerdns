@@ -107,6 +107,11 @@ class ZonePayloadBuilder
         $recordsByFqdnAndType = [];
         foreach ($zone->records as $record) {
             $key = implode(':', [$record->canonicalFqdn(), $record->type, $record->ttl]);
+            foreach ($recordsByFqdnAndType[$key] ?? [] as $groupedRecord) {
+                if ($groupedRecord->canonicalFqdn() === $record->canonicalFqdn()) {
+                    continue 2;
+                }
+            }
             $recordsByFqdnAndType[$key][] = $record;
         }
 
