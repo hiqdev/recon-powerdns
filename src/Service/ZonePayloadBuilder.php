@@ -104,11 +104,16 @@ class ZonePayloadBuilder
      */
     private function groupRecords(Zone $zone): array
     {
+        /**
+         * @var Record[][] $recordsByFqdnAndType
+         */
         $recordsByFqdnAndType = [];
         foreach ($zone->records as $record) {
             $key = implode(':', [$record->canonicalFqdn(), $record->type, $record->ttl]);
             foreach ($recordsByFqdnAndType[$key] ?? [] as $groupedRecord) {
-                if ($groupedRecord->canonicalFqdn() === $record->canonicalFqdn()) {
+                if ($groupedRecord->canonicalFqdn() === $record->canonicalFqdn()
+                    && $groupedRecord->canonicalValue() === $record->canonicalValue()
+                ) {
                     continue 2;
                 }
             }
